@@ -27,7 +27,7 @@ alphabet, than the probability of matching a primitive is:
 
 If we consider all primitives having equal lengths w, than
 
- b = n[s**{w}].
+ b ~ n[s**{w}].
 
 Now the Q is; What is the probability of having exactly N
 matches[boom] We must end up with a failure, so the answer is:
