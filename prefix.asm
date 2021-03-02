@@ -70,7 +70,6 @@ ck:     nop
         lea rsi, [r10+rdx];   2nd: P[i]
         mov edx, [r11+rcx*4]; 3rd: LEN[i]
         call strncmp wrt ..plt
-        ;; end testing
         re_establish
         ret
 ;; main spec 0.3
