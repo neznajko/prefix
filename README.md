@@ -4,7 +4,7 @@ There is an alphabet of capital letters e.g. **{A,B,C,D}**, which
 represent *constituents* of some biological objects. And a string of
 characters (**S**), which according to text might has a length up to
 *500,000!* Also there is given a set of *primitives* let's say
-**{"A", "BA", "CAB", "D"}**. The task is to find the so called *prefix*
+**{A, BA, CAB, D}**. The task is to find the so called *prefix*
 of *S*, it's the longest possible substring originating from *0*,
 that can be represented as a concatenation of *primitives*. For example 
 the *prefix* of ``ADABACABCAA`` is ``A+D+A+BA+CAB=ADABACAB``.

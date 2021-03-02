@@ -113,13 +113,17 @@ main:   nop
 Empty:  cmp r14, r15; L = R?
         jz Spit; positive
         call pop;
+        ;; ck if visited
+        mov al, '*';
+        cmp al, [r8+rbx*4];
+        jz Empty;
         mov rcx, 0; i <- 0
         ;; vanguard
-        cmp r9, rbx; vanguard > j [boom]
-        jz Loof; yep
+        cmp r9, rbx; vanguard > j[boom]
+        jge Loof; yep
         mov r9, rbx; update
-Loof:   cmp rcx, N; i == N [boom]
-        jz Empty; yep
+Loof:   cmp rcx, N; i == N[boom]
+        jz Mark; yep
         call ck; rax = 0 on match
         cmp rax, 0;
         jnz Inc; nop
@@ -128,8 +132,15 @@ Loof:   cmp rcx, N; i == N [boom]
         call push; yep
 Inc:    inc rcx; i++
         jmp Loof; follow me
-Spit:   mov rdi, r8; 1st
-        push r9; copy
+        ;; mark j as visited
+Mark:   mov al, '*';
+        mov [r8+rbx], al;
+        jmp Empty;
+Spit:   push r9; copy
+        push r8;
+        mov rdi, r13; 1st
+        call puts wrt ..plt
+        pop rdi; 1st
         call puts wrt ..plt
         lea rdi, [rel FMT]; 1st
         pop rsi;            2nd

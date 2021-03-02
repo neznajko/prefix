@@ -3,7 +3,7 @@ OBJ = ${PRO}.o
 SRC = ${PRO}.asm
 LNK = gcc -gdwarf
 
-${PRO}: ${OBJ} 
+a.out: ${OBJ} 
 	${LNK} $^
 ${OBJ}: ${SRC}
 	nasm -f elf64 -g -F dwarf $<

@@ -69,6 +69,8 @@ int main(void)
     }
     copy[i] = '*'; // mark as visited
   }
-  printf("%d\n", vanguard);
+  puts(T);
+  puts(copy);
+  printf("Prefix length: %d\n", vanguard);
 }
-// log: gcc prefix.c && ./a.out
+// log:
