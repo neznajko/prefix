@@ -1,7 +1,7 @@
 ## prefix
 **T***hus* is a nice problem, the text and the link are in *prefix.c*.
 There is an alphabet of capital letters e.g. **{A,B,C,D}**, which 
-represent *constituents* of some biological objects. And a string of
+represent *constituents* of some biological object. And a string of
 characters (**S**), which according to text might has a length of up to
 *500,000* characters. Also there is given a set of *primitives* let's say
 **{A, BA, CAB, D}**. The task is to find the so called *prefix*
